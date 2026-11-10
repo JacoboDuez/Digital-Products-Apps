@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;family=JetBrains+Mono:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "tertiary": "#56e5a9",
+        "secondary-fixed-dim": "#ffb3ad",
+        "on-primary-fixed": "#2a1700",
+        "surface-container": "#1d2025",
+        "on-secondary-container": "#ffaea8",
+        "primary-fixed": "#ffddb8",
+        "surface-dim": "#101418",
+        "on-tertiary-container": "#004e34",
+        "on-primary-fixed-variant": "#653e00",
+        "outline-variant": "#534434",
+        "on-error-container": "#ffdad6",
+        "inverse-primary": "#855300",
+        "outline": "#a08e7a",
+        "surface-variant": "#32353a",
+        "on-surface-variant": "#d8c3ad",
+        "on-primary": "#472a00",
+        "surface-container-highest": "#32353a",
+        "tertiary-fixed": "#6ffbbe",
+        "secondary-fixed": "#ffdad7",
+        "on-tertiary-fixed-variant": "#005236",
+        "on-secondary": "#68000a",
+        "tertiary-container": "#30c88f",
+        "on-tertiary": "#003824",
+        "on-primary-container": "#613b00",
+        "on-surface": "#e1e2e9",
+        "primary-container": "#f59e0b",
+        "on-error": "#690005",
+        "on-background": "#e1e2e9",
+        "secondary": "#ffb3ad",
+        "error": "#ffb4ab",
+        "surface-tint": "#ffb95f",
+        "background": "#101418",
+        "surface": "#101418",
+        "tertiary-fixed-dim": "#4edea3",
+        "error-container": "#93000a",
+        "primary": "#ffc174",
+        "on-tertiary-fixed": "#002113",
+        "secondary-container": "#a40217",
+        "surface-bright": "#36393f",
+        "surface-container-high": "#272a2f",
+        "inverse-on-surface": "#2e3036",
+        "surface-container-low": "#191c21",
+        "primary-fixed-dim": "#ffb95f",
+        "surface-container-lowest": "#0b0e13",
+        "inverse-surface": "#e1e2e9",
+        "on-secondary-fixed-variant": "#930013",
+        "on-secondary-fixed": "#410004"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "space-md": "1rem",
+        "gutter": "1.5rem",
+        "space-lg": "1.5rem",
+        "margin": "2rem",
+        "space-xl": "2.5rem",
+        "space-sm": "0.5rem",
+        "space-xs": "0.25rem",
+        "margin-mobile": "1rem",
+        "gutter-mobile": "0.75rem"
+      },
+      "fontFamily": {
+        "telemetry-counter": [
+          "JetBrains Mono"
+        ],
+        "label-lg": [
+          "JetBrains Mono"
+        ],
+        "display-lg": [
+          "Chivo"
+        ],
+        "label-sm": [
+          "JetBrains Mono"
+        ],
+        "body-lg": [
+          "Chivo"
+        ],
+        "headline-lg": [
+          "Chivo"
+        ],
+        "label-md": [
+          "JetBrains Mono"
+        ],
+        "headline-md": [
+          "Chivo"
+        ],
+        "body-md": [
+          "Chivo"
+        ],
+        "display-lg-mobile": [
+          "Chivo"
+        ],
+        "headline-sm": [
+          "Chivo"
+        ]
+      },
+      "fontSize": {
+        "telemetry-counter": [
+          "36px",
+          {
+            "lineHeight": "40px",
+            "fontWeight": "800"
+          }
+        ],
+        "label-lg": [
+          "14px",
+          {
+            "lineHeight": "18px",
+            "fontWeight": "700"
+          }
+        ],
+        "display-lg": [
+          "48px",
+          {
+            "lineHeight": "52px",
+            "fontWeight": "900"
+          }
+        ],
+        "label-sm": [
+          "10px",
+          {
+            "lineHeight": "14px",
+            "fontWeight": "600"
+          }
+        ],
+        "body-lg": [
+          "16px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "500"
+          }
+        ],
+        "headline-lg": [
+          "28px",
+          {
+            "lineHeight": "34px",
+            "fontWeight": "800"
+          }
+        ],
+        "label-md": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-md": [
+          "22px",
+          {
+            "lineHeight": "28px",
+            "fontWeight": "700"
+          }
+        ],
+        "body-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "400"
+          }
+        ],
+        "display-lg-mobile": [
+          "32px",
+          {
+            "lineHeight": "36px",
+            "fontWeight": "900"
+          }
+        ],
+        "headline-sm": [
+          "18px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "700"
+          }
+        ]
+      }
+    }
+  }
+}</script>
+</head>
+  <body class="bg-surface font-body-md text-body-md text-on-surface select-none antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[4px_0_16px_rgba(0,0,0,0.6)]"><div class="flex flex-col"><div class="h-20 px-space-md flex items-center gap-space-sm bg-surface-container-low"><div class="w-3 h-8 bg-primary-container rounded-DEFAULT"></div><div><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold block">Station Rack Alpha</span><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface font-black block">ANDON PAGER</span></div></div><div class="px-space-md py-space-sm bg-surface-container-high/40"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Terminal Config Drawer</span></div><nav class="p-space-sm flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-bold shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)]"><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-all rounded-DEFAULT bg-surface-container-high text-primary font-bold shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)]" data-path="live-andon-matrix" href="#"><span class="material-symbols-outlined text-primary">grid_view</span><span class="font-label-md text-label-md uppercase tracking-wide">Live Matrix</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all rounded-DEFAULT" data-path="active-alarms-queue" href="#"><span class="material-symbols-outlined text-error">campaign</span><span class="font-label-md text-label-md uppercase tracking-wide">Alert Queue</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all rounded-DEFAULT" data-path="telemetry-machine-status" href="#"><span class="material-symbols-outlined text-tertiary">precision_manufacturing</span><span class="font-label-md text-label-md uppercase tracking-wide">Machine Gears</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all rounded-DEFAULT" data-path="twilio-dispatch-logs" href="#"><span class="material-symbols-outlined text-primary-fixed">sms</span><span class="font-label-md text-label-md uppercase tracking-wide">SMS Dispatch</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all rounded-DEFAULT" data-path="station-calibration" href="#"><span class="material-symbols-outlined text-outline">settings_input_component</span><span class="font-label-md text-label-md uppercase tracking-wide">Parameters</span></a></nav></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm uppercase">Heartbeat</span><span class="font-label-sm text-label-sm text-tertiary">STABLE 1.2s</span></div><div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden"><div class="bg-tertiary h-full w-full animate-pulse"></div></div><div class="flex items-center justify-between pt-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">DIN-RAIL BUS</span><span class="font-label-sm text-label-sm font-telemetry-counter text-primary">PORT: 4092</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-20 bg-surface-container-lowest/95 backdrop-blur-xl z-40 shadow-[0_4px_20px_rgba(0,0,0,0.7)] px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="p-space-xs bg-surface-container-high rounded-DEFAULT"><span class="material-symbols-outlined text-primary text-[28px]">precision_manufacturing</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm font-black text-on-surface tracking-tight uppercase">INJ-MOLD-04</span><span class="font-label-md text-label-md text-on-surface-variant tracking-normal font-telemetry-counter">(Haitian Mars II)</span></div><span class="font-label-sm text-label-sm text-primary tracking-widest uppercase font-bold">PLASTICS &amp; MOLDING DEPT - BAY 3</span></div></div><div class="flex flex-col items-center justify-center"><div class="flex items-center gap-space-sm"><span class="font-display-lg-mobile text-display-lg-mobile lg:font-display-lg lg:text-display-lg font-black uppercase tracking-tighter text-on-surface">PAGING SYSTEM</span><span class="px-space-xs py-0.5 bg-primary text-on-primary font-label-sm text-label-sm rounded-DEFAULT uppercase font-black">ON-LINE</span></div><div class="flex items-center gap-space-md text-on-surface-variant font-label-md text-label-md"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">schedule</span>SHIFT 02: <span class="font-telemetry-counter font-bold text-on-surface">14:38:09 EST</span></span><span class="text-outline-variant">•</span><span class="font-label-md text-label-md uppercase tracking-wider text-outline">FACILITY: <span class="text-on-surface font-bold">SITE-EAST-A</span></span></div></div><div class="flex items-center gap-space-md"><div class="flex flex-col items-end gap-space-xs"><div class="flex items-center gap-space-xs p-1 bg-surface-container-high rounded-DEFAULT"><span class="px-space-sm py-1 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm rounded-DEFAULT flex items-center gap-1 font-bold animate-pulse"><span class="material-symbols-outlined text-[14px]">warning</span>ACTIVE ALERTS (3)</span><span class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface cursor-pointer hidden xl:inline-block">NORMAL</span><span class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface cursor-pointer hidden xl:inline-block">TWILIO FAIL</span></div><div class="flex items-center gap-space-sm font-label-sm text-label-sm"><span class="flex items-center gap-1 text-on-surface-variant"><span class="material-symbols-outlined text-[12px] text-tertiary">wifi_tethering</span>PING: <span class="font-telemetry-counter text-tertiary">18ms</span></span><span class="text-outline-variant">•</span><span class="text-primary font-label-sm text-label-sm flex items-center gap-1"><span class="w-1.5 h-1.5 bg-primary rounded-full animate-ping"></span>TWILIO GATEWAY OK</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-20 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+  <!-- Dynamic Notification / Toast Strip -->
+  <div class="hidden transition-all duration-300 w-full px-gutter py-2 text-center font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-space-sm bg-tertiary-container text-on-tertiary z-30 shadow-md" id="toast-banner">
+  <span class="material-symbols-outlined text-body-lg">notifications_active</span>
+  <span id="toast-text">System Synced Successfully</span>
+</div>
+<!-- Operational Context Sub-Bar / Connection State Switcher Strip -->
+<div class="w-full bg-surface-container-lowest px-gutter py-space-xs flex flex-wrap items-center justify-between shadow-sm">
+    <div class="flex items-center gap-space-md">
+    <div class="flex items-center gap-space-xs">
+    <span class="font-label-sm text-label-sm uppercase text-outline">CELL TAG:</span>
+    <span class="font-telemetry-counter font-bold text-on-surface bg-surface-container-high px-space-xs py-0.5 rounded-DEFAULT" id="current-cell-display">INJ-MOLD-04</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline">
+<span>FACILITY:</span>
+<span class="text-primary font-bold">SITE-EAST PLANT // SHIFT 1</span>
+</div>
+</div>
+<!-- Interactive Connection State Simulator Pills -->
+<div class="flex items-center gap-space-sm py-1">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold mr-1 hidden sm:inline">STATE PRESET:</span>
+<div class="flex bg-surface-container-high p-0.5 rounded-DEFAULT gap-0.5">
+<button class="px-space-sm py-1 rounded-DEFAULT font-label-sm text-label-sm font-bold uppercase transition-all bg-secondary-container text-on-secondary-container flex items-center gap-1 shadow-sm" id="btn-state-red" onclick="setConnectionState('red')">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span>Alerts Active (Red)</span>
+</button>
+<button class="px-space-sm py-1 rounded-DEFAULT font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1" id="btn-state-green" onclick="setConnectionState('green')">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>All Clear (Green)</span>
+</button>
+<button class="px-space-sm py-1 rounded-DEFAULT font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1" id="btn-state-yellow" onclick="setConnectionState('yellow')">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Twilio Retry (Yellow)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Primary Industrial Console Layout -->
+<div class="w-full p-gutter flex flex-col lg:flex-row gap-gutter">
+<!-- LEFT COLUMN: App Configuration & Diagnostic Mode (Width ~30%) -->
+<div class="w-full lg:w-3/12 flex flex-col gap-gutter">
+<!-- Machine ID Configuration Bay -->
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest/40 -mx-space-md -mt-space-md p-space-md mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">Unit Identifier</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase bg-surface-container text-tertiary px-space-xs py-0.5 rounded-DEFAULT font-bold">ONLINE</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT my-space-sm flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-outline">Active Machinery Designation</span>
+<div class="flex items-baseline justify-between">
+<span class="font-telemetry-counter text-headline-lg font-black text-primary tracking-tight" id="active-machine-id-text">INJ-MOLD-04</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">CHASSIS #4088</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span>CONTROLLER:</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">KEBA KePlast i3000</span>
+</div>
+</div>
+</div>
+<button class="mt-space-sm w-full h-12 bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-lg text-label-lg uppercase rounded-DEFAULT flex items-center justify-center gap-space-xs shadow-sm active:translate-y-0.5 transition-all" onclick="openModal('machine-id-modal')">
+<span class="material-symbols-outlined text-[18px]">manage_accounts</span>
+<span>Change Machine ID</span>
+</button>
+</div>
+<!-- Twilio Messaging Diagnostic Bay -->
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest/40 -mx-space-md -mt-space-md p-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">cell_tower</span>
+<span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">Twilio Gateway</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase bg-tertiary-container text-on-tertiary px-space-xs py-0.5 rounded-DEFAULT font-bold" id="twilio-badge-status">CONNECTED</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>API REVISION:</span>
+<span class="font-telemetry-counter text-on-surface font-bold">v2010.REST</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>TRUNK SID:</span>
+<span class="font-telemetry-counter text-primary font-bold">AC9f89...3281</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>DISPATCH MODE:</span>
+<span class="text-tertiary font-bold">SMS WEBHOOK 200</span>
+</div>
+</div>
+<!-- Telemetry Mini-Stat Triplets -->
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="bg-surface-container p-space-xs rounded-DEFAULT text-center">
+<span class="font-label-sm text-label-sm uppercase text-outline block">Queue</span>
+<span class="font-telemetry-counter font-bold text-headline-sm text-on-surface" id="telemetry-queue-count">0</span>
+</div>
+<div class="bg-surface-container p-space-xs rounded-DEFAULT text-center">
+<span class="font-label-sm text-label-sm uppercase text-outline block">Latency</span>
+<span class="font-telemetry-counter font-bold text-headline-sm text-tertiary">24<span class="text-label-sm">ms</span></span>
+</div>
+<div class="bg-surface-container p-space-xs rounded-DEFAULT text-center">
+<span class="font-label-sm text-label-sm uppercase text-outline block">Gateway</span>
+<span class="font-label-sm text-label-sm font-bold text-tertiary uppercase mt-1 block" id="telemetry-gw-status">ACTIVE</span>
+</div>
+</div>
+<button class="w-full h-12 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg uppercase rounded-DEFAULT flex items-center justify-center gap-space-xs shadow-sm active:translate-y-0.5 transition-all" onclick="openModal('twilio-test-modal')">
+<span class="material-symbols-outlined text-primary text-[18px]">send_to_mobile</span>
+<span>Test Text Message (SMS)</span>
+</button>
+</div>
+<!-- Quick Operator Duty Log -->
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT shadow-md flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Active Shift Roster</span>
+<div class="flex items-center justify-between p-space-xs bg-surface-container rounded-DEFAULT">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 bg-tertiary rounded-full"></span>
+<span class="font-body-md text-body-md text-on-surface font-bold">R. Kowalski</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase">Lead Tech</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container rounded-DEFAULT">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 bg-tertiary rounded-full"></span>
+<span class="font-body-md text-body-md text-on-surface">M. Sterling</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase">Floor Operator</span>
+</div>
+</div>
+</div>
+<!-- CENTER COLUMN: Machine & Blender Animation & Hazard Action Footer (Width ~45%) -->
+<div class="w-full lg:w-6/12 flex flex-col gap-gutter">
+<!-- Top Card: Blender Animated Rotating Gears & Feeder Sync -->
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT shadow-md flex flex-col">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest/40 -mx-space-md -mt-space-md p-space-md mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[22px]">cyclone</span>
+<div>
+<span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface block">Gravimetric Resin Blender</span>
+<span class="font-label-sm text-label-sm text-outline block uppercase">Auxiliary Hopper Unit #04</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 bg-tertiary rounded-full animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold uppercase font-telemetry-counter">MESH SYNC OK</span>
+</div>
+</div>
+<!-- Animated Blender SVG Container -->
+<div class="relative bg-surface-container-lowest rounded-DEFAULT overflow-hidden flex items-center justify-center p-space-xs">
+<!-- STITCH_SVG_START:ANIMATION_1 class="w-full h-44" --><div class="w-full h-44" id="animated-svg-ANIMATION_1" style="display:block;"><svg height="100%" viewbox="0 0 500 240" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="gearGrad1" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#94a3b8"></stop>
+<stop offset="50%" stop-color="#475569"></stop>
+<stop offset="100%" stop-color="#1e293b"></stop>
+</lineargradient>
+<lineargradient id="gearGrad2" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#f59e0b"></stop>
+<stop offset="50%" stop-color="#d97706"></stop>
+<stop offset="100%" stop-color="#78350f"></stop>
+</lineargradient>
+<lineargradient id="gearGrad3" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#38bdf8"></stop>
+<stop offset="50%" stop-color="#0284c7"></stop>
+<stop offset="100%" stop-color="#0f172a"></stop>
+</lineargradient>
+<filter height="140%" id="shadow" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="6" flood-color="#000000" flood-opacity="0.6" stddeviation="6"></fedropshadow>
+</filter>
+</defs>
+<style>
+    @keyframes spinClockwise {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes spinCounterClockwise {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+    .gear-main {
+      transform-origin: 170px 120px;
+      animation: spinClockwise 8s linear infinite;
+    }
+    .gear-secondary {
+      transform-origin: 310px 95px;
+      animation: spinCounterClockwise 5.33s linear infinite;
+    }
+    .gear-tertiary {
+      transform-origin: 270px 175px;
+      animation: spinClockwise 4s linear infinite;
+    }
+  </style>
+<!-- Background technical grid lines -->
+<g opacity="0.4" stroke="#334155" stroke-dasharray="3 3" stroke-width="1">
+  <line x1="20" x2="480" y1="120" y2="120"></line>
+  <line x1="170" x2="170" y1="20" y2="220"></line>
+  <line x1="310" x2="310" y1="20" y2="220"></line>
+  <circle cx="170" cy="120" fill="none" r="95"></circle>
+  <circle cx="310" cy="95" fill="none" r="65"></circle>
+  <circle cx="270" cy="175" fill="none" r="50"></circle>
+</g>
+<!-- Large Primary Gear (12 teeth, radius ~80) -->
+<g class="gear-main" filter="url(#shadow)">
+<!-- 12 teeth -->
+<g fill="url(#gearGrad1)" stroke="#0f172a" stroke-width="1.5">
+<!-- Outer ring with teeth -->
+<path d="
+        M 170 42 L 176 42 L 180 54 L 188 56 L 198 48 L 204 53 L 202 65 L 210 70 L 222 66 L 225 74 L 219 84 L 224 92 L 237 92 L 237 100 L 228 107 L 228 116 L 239 122 L 235 130 L 223 131 L 220 140 L 227 151 L 220 157 L 209 152 L 202 158 L 204 171 L 196 174 L 187 165 L 179 168 L 174 180 L 166 180 L 161 168 L 153 165 L 144 174 L 136 171 L 138 158 L 131 152 L 120 157 L 113 151 L 120 140 L 117 131 L 105 130 L 101 122 L 112 116 L 112 107 L 103 100 L 103 92 L 116 92 L 121 84 L 115 74 L 118 66 L 130 70 L 138 65 L 136 53 L 142 48 L 152 56 L 160 54 Z"></path>
+<!-- Body -->
+<circle cx="170" cy="120" fill="url(#gearGrad1)" r="62" stroke="#334155" stroke-width="2"></circle>
+<!-- Cutout spokes -->
+<circle cx="170" cy="85" fill="#0b1120" r="11"></circle>
+<circle cx="200" cy="103" fill="#0b1120" r="11"></circle>
+<circle cx="200" cy="137" fill="#0b1120" r="11"></circle>
+<circle cx="170" cy="155" fill="#0b1120" r="11"></circle>
+<circle cx="140" cy="137" fill="#0b1120" r="11"></circle>
+<circle cx="140" cy="103" fill="#0b1120" r="11"></circle>
+<!-- Inner Hub -->
+<circle cx="170" cy="120" fill="#1e293b" r="26" stroke="#64748b" stroke-width="2"></circle>
+<circle cx="170" cy="120" fill="#0b1120" r="12" stroke="#f59e0b" stroke-width="2"></circle>
+<rect fill="#f59e0b" height="6" width="4" x="168" y="106"></rect>
+</g>
+</g>
+<!-- Secondary Medium Gear (8 teeth, radius ~52) -->
+<g class="gear-secondary" filter="url(#shadow)">
+<g fill="url(#gearGrad2)" stroke="#0f172a" stroke-width="1.5">
+<path d="
+        M 310 44 L 316 44 L 320 54 L 329 57 L 338 50 L 344 56 L 341 66 L 349 73 L 360 70 L 363 79 L 354 87 L 357 97 L 368 101 L 366 110 L 354 113 L 351 123 L 359 132 L 353 139 L 342 135 L 334 142 L 335 153 L 326 156 L 319 146 L 309 147 L 304 158 L 295 156 L 294 145 L 284 142 L 275 149 L 269 142 L 275 133 L 271 123 L 259 120 L 260 110 L 271 107 L 272 97 L 262 90 L 266 82 L 277 84 L 284 76 L 280 65 L 288 60 L 295 68 L 304 64 Z"></path>
+<circle cx="310" cy="95" fill="url(#gearGrad2)" r="40" stroke="#78350f" stroke-width="2"></circle>
+<!-- Cutouts -->
+<circle cx="310" cy="73" fill="#0b1120" r="8"></circle>
+<circle cx="329" cy="85" fill="#0b1120" r="8"></circle>
+<circle cx="329" cy="107" fill="#0b1120" r="8"></circle>
+<circle cx="310" cy="117" fill="#0b1120" r="8"></circle>
+<circle cx="291" cy="107" fill="#0b1120" r="8"></circle>
+<circle cx="291" cy="85" fill="#0b1120" r="8"></circle>
+<!-- Hub -->
+<circle cx="310" cy="95" fill="#1e293b" r="18" stroke="#cbd5e1" stroke-width="1.5"></circle>
+<circle cx="310" cy="95" fill="#0b1120" r="9" stroke="#f59e0b" stroke-width="2"></circle>
+</g>
+</g>
+<!-- Small Tertiary Gear (6 teeth, radius ~38) -->
+<g class="gear-tertiary" filter="url(#shadow)">
+<g fill="url(#gearGrad3)" stroke="#0f172a" stroke-width="1.5">
+<path d="
+        M 270 137 L 275 137 L 278 145 L 287 149 L 295 143 L 300 148 L 296 157 L 302 165 L 311 165 L 312 173 L 304 180 L 305 188 L 313 194 L 309 201 L 299 199 L 293 206 L 293 216 L 285 216 L 280 208 L 271 207 L 265 214 L 258 210 L 261 200 L 256 193 L 246 193 L 246 184 L 254 178 L 253 170 L 245 163 L 250 156 L 260 158 L 267 151 Z"></path>
+<circle cx="270" cy="175" fill="url(#gearGrad3)" r="28" stroke="#0369a1" stroke-width="1.5"></circle>
+<circle cx="270" cy="175" fill="#0f172a" r="14" stroke="#38bdf8" stroke-width="2"></circle>
+<circle cx="270" cy="175" fill="#38bdf8" r="6"></circle>
+</g>
+</g>
+<!-- Industrial telemetry accents -->
+<text fill="#64748b" font-family="monospace" font-size="11" letter-spacing="1.5" x="30" y="36">RPM: 420 // SYNC_OK</text>
+<text fill="#10b981" font-family="monospace" font-size="11" letter-spacing="1" x="30" y="215">● GEAR TRAIN ACTIVE</text>
+<text fill="#64748b" font-family="monospace" font-size="10" x="350" y="215">BLENDER RIG v2.4</text>
+</svg></div><!-- STITCH_SVG_END:ANIMATION_1 -->
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/80 px-2 py-1 rounded-DEFAULT font-label-sm text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">rotate_right</span>
+<span>FEED ROLL 1 &amp; 2 INTERLOCKED</span>
+</div>
+</div>
+<!-- Blender Telemetry Readout Grid -->
+<div class="grid grid-cols-3 gap-space-sm mt-space-md">
+<div class="bg-surface-container p-space-sm rounded-DEFAULT">
+<span class="font-label-sm text-label-sm uppercase text-outline block">Feeder Speed</span>
+<span class="font-telemetry-counter text-headline-sm font-black text-on-surface">1,420 <span class="text-label-sm text-outline">RPM</span></span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-DEFAULT">
+<span class="font-label-sm text-label-sm uppercase text-outline block">Drive Torque</span>
+<span class="font-telemetry-counter text-headline-sm font-black text-tertiary">38.4 <span class="text-label-sm text-outline">Nm</span></span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-DEFAULT">
+<span class="font-label-sm text-label-sm uppercase text-outline block">Batch Weight</span>
+<span class="font-telemetry-counter text-headline-sm font-black text-primary">99.8 <span class="text-label-sm text-outline">%</span></span>
+</div>
+</div>
+</div>
+<!-- Middle Card: Haitian Mars II Injection Machine & Operational Overlay -->
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT shadow-md flex flex-col">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest/40 -mx-space-md -mt-space-md p-space-md mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">precision_manufacturing</span>
+<div>
+<span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface block">Injection Unit INJ-MOLD-04</span>
+<span class="font-label-sm text-label-sm text-outline block uppercase">Haitian Mars II Series // Servo Hydraulic</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 bg-surface-container text-primary font-label-sm text-label-sm uppercase font-bold rounded-DEFAULT">IN PRODUCTION</span>
+</div>
+<!-- Machine Visual Frame with Metrics Overlay -->
+<div class="relative rounded-DEFAULT overflow-hidden bg-surface-container-lowest">
+<img alt="Injection Molding Machine" class="w-full h-56 object-cover rounded-DEFAULT shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLvtkQngR3P8fnC-YjI86wqx_HvkaKTZJPzw6fZAgFE6xZUlBDypBmeOi3BgjK5qzAXP6AhtcL10Ys3RoMUkUcLCscyZDvCbd5Nmv1RBN1V5fvqkmlUUzJ1OexC6n2M1YujjyUaT7RHBgsjG7Pmcn6ylhbtHMgGaRreCAbLrloe5qY8esT6VWYikNWOUh_Azg0VC5JAxBwK8iuGtEYEzZ3z_UyY0rZfqHpKR8NQOM"/>
+<!-- Translucent Telemetry Glass HUD Overlay -->
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/90 to-transparent p-space-md pt-space-lg flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Hydraulic Clamp</span>
+<span class="font-telemetry-counter text-headline-sm font-black text-on-surface">240 <span class="text-label-sm text-primary">T</span></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Melt Temp</span>
+<span class="font-telemetry-counter text-headline-sm font-black text-primary-fixed">228 <span class="text-label-sm text-primary">°C</span></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Cycle Time</span>
+<span class="font-telemetry-counter text-headline-sm font-black text-tertiary">18.4 <span class="text-label-sm text-tertiary">s</span></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Cavity Pressure</span>
+<span class="font-telemetry-counter text-headline-sm font-black text-on-surface">142 <span class="text-label-sm text-outline">bar</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- CENTERED LARGE HAZARD FOOTER BUTTON -->
+<div class="w-full flex flex-col items-center">
+<button class="w-full py-space-md px-space-xl rounded-DEFAULT shadow-xl hover:brightness-110 active:scale-[0.99] active:translate-y-0.5 transition-all cursor-pointer group flex items-center justify-center" onclick="openModal('create-alert-modal')" style="background-image: repeating-linear-gradient(45deg, #f59e0b, #f59e0b 24px, #111827 24px, #111827 48px);" type="button">
+    <div class="bg-surface-container-lowest/95 px-space-xl py-space-sm rounded-DEFAULT flex items-center justify-center gap-space-md shadow-2xl transition-transform">
+    <span class="material-symbols-outlined text-primary-container text-[36px] animate-bounce">warning</span>
+    <div class="flex flex-col text-left">
+    <span class="font-headline-lg text-headline-lg uppercase font-black tracking-tight text-on-surface leading-tight">TRIGGER ANDON ALERT</span>
+    <span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">CREATE AN ANDON ALARM</span>
+    </div>
+    </div>
+</button>
+</div>
+</div>
+<!-- RIGHT COLUMN: Unacknowledged Andon Alerts Queue (Width ~25%) -->
+<div class="w-full lg:w-3/12 flex flex-col gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT shadow-md flex flex-col h-full">
+<!-- Aside Header -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest/40 -mx-space-md -mt-space-md p-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">notification_important</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">Alert Queue</span>
+<span class="bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded-DEFAULT font-telemetry-counter font-bold text-label-sm" id="queue-badge-counter">3</span>
+</div>
+</div>
+<!-- Empty State Toggle Demonstration Button -->
+<button class="font-label-sm text-label-sm uppercase bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface px-space-xs py-1 rounded-DEFAULT transition-all" id="toggle-simulate-empty" onclick="toggleSimulateClear()">
+            Simulate Cleared
+          </button>
+</div>
+<div class="py-space-xs flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>UNACKNOWLEDGED FAULTS</span>
+<span>SELECT CARD TO ACT</span>
+</div>
+<!-- Scrollable Active Cards List Container -->
+<div class="flex flex-col gap-space-sm mt-space-xs overflow-y-auto" id="alerts-card-list">
+<!-- Card 1 -->
+<div class="bg-surface-container hover:bg-surface-container-high p-space-sm rounded-DEFAULT cursor-pointer shadow-sm transition-all flex flex-col gap-space-xs group" onclick="openAlertAction('ALT-9041', 'HYDRAULIC PRESSURE LOSS', 'Bay 3 - Station INJ-04', '10:42:15 AM (3m ago)', 'P1 CRITICAL', 'bg-secondary-container text-on-secondary-container')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold font-telemetry-counter">ALT-9041 // P1</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-telemetry-counter">10:42:15 AM</span>
+</div>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface font-black group-hover:text-primary transition-colors">HYDRAULIC PRESSURE LOSS</span>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs bg-surface-container-lowest/50 px-space-xs py-1 rounded-DEFAULT">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span>Bay 3 - Station INJ-04</span>
+<span class="text-error font-bold">3m ago</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container hover:bg-surface-container-high p-space-sm rounded-DEFAULT cursor-pointer shadow-sm transition-all flex flex-col gap-space-xs group" onclick="openAlertAction('ALT-9039', 'MATERIAL HOPPER EMPTY', 'Bay 3 - Feeder 02', '10:35:02 AM (10m ago)', 'P2 WARNING', 'bg-primary-container text-on-primary-container')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm uppercase text-primary font-bold font-telemetry-counter">ALT-9039 // P2</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-telemetry-counter">10:35:02 AM</span>
+</div>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface font-black group-hover:text-primary transition-colors">MATERIAL HOPPER EMPTY</span>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs bg-surface-container-lowest/50 px-space-xs py-1 rounded-DEFAULT">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span>Bay 3 - Feeder 02</span>
+<span class="text-primary font-bold">10m ago</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container hover:bg-surface-container-high p-space-sm rounded-DEFAULT cursor-pointer shadow-sm transition-all flex flex-col gap-space-xs group" onclick="openAlertAction('ALT-9035', 'EJECTOR PIN BINDING', 'Bay 3 - Station INJ-04', '10:14:48 AM (31m ago)', 'P2 WARNING', 'bg-primary-container text-on-primary-container')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm uppercase text-primary font-bold font-telemetry-counter">ALT-9035 // P2</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-telemetry-counter">10:14:48 AM</span>
+</div>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface font-black group-hover:text-primary transition-colors">EJECTOR PIN BINDING</span>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs bg-surface-container-lowest/50 px-space-xs py-1 rounded-DEFAULT">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span>Bay 3 - Station INJ-04</span>
+<span class="text-primary font-bold">31m ago</span>
+</div>
+</div>
+</div>
+<!-- Clean Empty State Container (Hidden by default, shown when simulated clear) -->
+<div class="hidden flex-1 flex-col items-center justify-center p-space-md text-center py-space-xl my-auto" id="alerts-empty-state">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[36px]">verified</span>
+</div>
+<span class="font-headline-sm text-headline-sm uppercase font-bold text-on-surface">ALL CLEAR</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-[220px]">
+            No active alerts in queue. All shopfloor stations and feeders are operating normally.
+          </p>
+<div class="mt-space-md px-space-sm py-1 bg-surface-container-lowest text-tertiary font-label-sm text-label-sm uppercase rounded-DEFAULT flex items-center gap-1 font-bold">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            ZERO OPEN STOPPAGES
+          </div>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 1: CHANGE MACHINE ID CONFIGURATION                                    -->
+<!-- ========================================================================= -->
+<div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center p-space-md" id="machine-id-modal">
+<div class="bg-surface-container-low max-w-lg w-full rounded-DEFAULT p-space-lg shadow-2xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest/50 -mx-space-lg -mt-space-lg p-space-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">pin</span>
+<span class="font-headline-md text-headline-md uppercase tracking-tight text-on-surface font-black">Configure Machine ID</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeModal('machine-id-modal')">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Updating terminal identity updates telemetry streams and Twilio SMS paging routing headers for this physical station.
+      </p>
+<form class="flex flex-col gap-space-md" onsubmit="handleSaveMachineId(event)">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-outline">Operator / Tech Full Name</label>
+<input class="h-12 bg-surface-container-lowest px-space-md text-on-surface rounded-DEFAULT font-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="input-tech-name" placeholder="e.g., Alex Vance" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-outline">Password / Badge PIN</label>
+<input class="h-12 bg-surface-container-lowest px-space-md text-on-surface rounded-DEFAULT font-telemetry-counter focus:outline-none focus:ring-1 focus:ring-primary" id="input-tech-pin" maxlength="8" placeholder="••••" required="" type="password"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-outline">New Machine ID / Station Tag</label>
+<input class="h-12 bg-surface-container-lowest px-space-md text-primary font-telemetry-counter font-bold rounded-DEFAULT focus:outline-none focus:ring-1 focus:ring-primary uppercase" id="input-new-machine-id" required="" type="text" value="INJ-MOLD-04"/>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-sm">
+<button class="h-12 px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md uppercase rounded-DEFAULT" onclick="closeModal('machine-id-modal')" type="button">
+            Cancel
+          </button>
+<button class="h-12 px-space-lg bg-primary-container text-on-primary hover:bg-primary font-headline-sm text-headline-sm uppercase font-black rounded-DEFAULT" type="submit">
+            Save Machine ID
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 2: TWILIO TEST SMS DIAGNOSTIC                                         -->
+<!-- ========================================================================= -->
+<div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center p-space-md" id="twilio-test-modal">
+<div class="bg-surface-container-low max-w-lg w-full rounded-DEFAULT p-space-lg shadow-2xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest/50 -mx-space-lg -mt-space-lg p-space-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">sms</span>
+<span class="font-headline-md text-headline-md uppercase tracking-tight text-on-surface font-black">Twilio SMS Diagnostic</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeModal('twilio-test-modal')">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT flex items-center justify-between text-on-surface font-label-sm text-label-sm">
+<span>GATEWAY SID: AC9f89e4726...</span>
+<span class="text-tertiary font-bold uppercase">OUTBOUND ROUTE READY</span>
+</div>
+<form class="flex flex-col gap-space-md" onsubmit="handleSendTwilioTest(event)">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-outline">Recipient Phone Number (E.164 format)</label>
+<input class="h-12 bg-surface-container-lowest px-space-md text-on-surface font-telemetry-counter rounded-DEFAULT focus:outline-none focus:ring-1 focus:ring-primary" id="input-twilio-phone" required="" type="tel" value="+1 (555) 839-4029"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-outline">Test Message Payload</label>
+<textarea class="bg-surface-container-lowest p-space-md text-on-surface font-body-md rounded-DEFAULT focus:outline-none focus:ring-1 focus:ring-primary" id="input-twilio-msg" required="" rows="3">[ANDON TEST] Station Bay 3 Paging Test. Automated dispatch test ping from Haitian Mars II injection controller.</textarea>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-sm">
+<button class="h-12 px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md uppercase rounded-DEFAULT" onclick="closeModal('twilio-test-modal')" type="button">
+            Close
+          </button>
+<button class="h-12 px-space-lg bg-primary-container text-on-primary hover:bg-primary font-headline-sm text-headline-sm uppercase font-black rounded-DEFAULT flex items-center gap-space-xs" id="btn-submit-twilio-test" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Send Test SMS</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 3: CREATE & TRIGGER ANDON ALERT                                       -->
+<!-- ========================================================================= -->
+<div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/85 backdrop-blur-md flex items-center justify-center p-space-md" id="create-alert-modal">
+<div class="bg-surface-container-low max-w-xl w-full rounded-DEFAULT p-space-lg shadow-2xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest/50 -mx-space-lg -mt-space-lg p-space-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[28px] animate-pulse">campaign</span>
+<div>
+<span class="font-headline-md text-headline-md uppercase tracking-tight text-on-surface font-black block">Trigger Shopfloor Andon Alert</span>
+  <span class="font-label-sm text-label-sm text-error uppercase font-bold">CRITICAL CALL FOR SHOPFLOOR INTERVENTION</span>
+  </div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeModal('create-alert-modal')">
+  <span class="material-symbols-outlined text-[24px]">close</span>
+  </button>
+</div>
+<form class="flex flex-col gap-space-md" onsubmit="handleTriggerAndon(event)">
+<!-- Station / Cell Selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-outline">Target Station / Cell</label>
+<select class="h-12 bg-surface-container-lowest px-space-md text-on-surface font-label-md rounded-DEFAULT focus:outline-none focus:ring-1 focus:ring-primary" id="new-alert-station">
+<option selected="" value="main_Injection Target">Station Bay 3 - Mold Unit 04 (INJ-MOLD-04)</option>
+<option value="other_Injection Target">Bay 3 - Feeder 02 (Blender Unit)</option>
+<!-- <option value="Bay 3 - Robot Take-out Cell">Bay 3 - Robot Take-out Cell</option>
+<option value="Bay 3 - Granulator Chute">Bay 3 - Granulator Chute</option> -->
+</select>
+</div>
+<!-- Alert Reason Dropdown / List -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-outline">Alert Reason / Failure Root</label>
+<select class="h-12 bg-surface-container-lowest px-space-md text-on-surface font-headline-sm uppercase rounded-DEFAULT focus:outline-none focus:ring-1 focus:ring-primary font-bold" id="new-alert-reason">
+<option value="Material Starvation / Hopper Empty">Material Starvation / Hopper Empty</option>
+<option value="Hydraulic Pressure Loss">Hydraulic Pressure Loss</option>
+<option selected="" value="Mold Jam / Part Stuck">Mold Jam / Part Stuck</option>
+<option value="Quality Defect - Flash/Sink">Quality Defect - Flash / Sink Mark</option>
+<option value="Safety Interlock Tripped">Safety Interlock / Gate Tripped</option>
+</select>
+</div>
+<!-- Severity Level Selection (Radio cards) -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-outline">Severity Level</label>
+<div class="grid grid-cols-3 gap-space-sm">
+<label class="flex flex-col p-space-sm bg-surface-container-lowest rounded-DEFAULT cursor-pointer hover:bg-surface-container transition-all">
+<input checked="" class="accent-error mb-1" name="alert-severity" type="radio" value="P1 CRITICAL"/>
+<span class="font-headline-sm text-headline-sm text-error font-black uppercase">P1 Critical</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Immediate Stop</span>
+</label>
+<label class="flex flex-col p-space-sm bg-surface-container-lowest rounded-DEFAULT cursor-pointer hover:bg-surface-container transition-all">
+<input class="accent-primary mb-1" name="alert-severity" type="radio" value="P2 WARNING"/>
+<span class="font-headline-sm text-headline-sm text-primary font-black uppercase">P2 Warning</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Impending Halt</span>
+</label>
+<label class="flex flex-col p-space-sm bg-surface-container-lowest rounded-DEFAULT cursor-pointer hover:bg-surface-container transition-all">
+<input class="accent-outline mb-1" name="alert-severity" type="radio" value="P3 INFO"/>
+<span class="font-headline-sm text-headline-sm text-on-surface font-black uppercase">P3 Info</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Maintenance Assist</span>
+</label>
+</div>
+</div>
+<!-- Optional Notes -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-outline">Operator Field Notes (Optional)</label>
+<textarea class="bg-surface-container-lowest p-space-md text-on-surface font-body-md rounded-DEFAULT focus:outline-none focus:ring-1 focus:ring-primary" id="new-alert-notes" placeholder="e.g., Gate sensor interlock flashing amber. Parts hanging on stationary platen." rows="2"></textarea>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center justify-end gap-space-sm pt-space-sm">
+<button class="h-12 px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md uppercase rounded-DEFAULT" onclick="closeModal('create-alert-modal')" type="button">
+            Cancel
+          </button>
+<button class="h-12 px-space-xl bg-secondary-container hover:brightness-110 text-on-secondary-container font-headline-sm text-headline-sm uppercase font-black rounded-DEFAULT flex items-center gap-space-xs shadow-lg" type="submit">
+<span class="material-symbols-outlined text-[22px]">contactless</span>
+<span>Confirm &amp; Dispatch Twilio Page</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 4: ALERT CARD ACTION (ACKNOWLEDGE / CANCEL / ESCALATE)              -->
+<!-- ========================================================================= -->
+<div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center p-space-md" id="alert-action-modal">
+<div class="bg-surface-container-low max-w-lg w-full rounded-DEFAULT p-space-lg shadow-2xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest/50 -mx-space-lg -mt-space-lg p-space-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">assignment</span>
+<div>
+<span class="font-headline-md text-headline-md uppercase tracking-tight text-on-surface font-black" id="modal-alert-id">ALT-9041</span>
+<span class="font-label-sm text-label-sm uppercase font-bold text-error block" id="modal-alert-urgency">P1 CRITICAL DISPATCH</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeModal('alert-action-modal')">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<!-- Alert Details Overview -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">FAULT DESIGNATION:</span>
+<span class="font-headline-sm text-headline-sm uppercase font-black text-on-surface" id="modal-alert-type">HYDRAULIC PRESSURE LOSS</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">ORIGIN STATION:</span>
+<span class="font-label-md text-label-md text-primary font-bold" id="modal-alert-station">Bay 3 - Station INJ-04</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">TIMESTAMP:</span>
+<span class="font-telemetry-counter text-label-sm text-on-surface-variant" id="modal-alert-time">10:42:15 AM (3m ago)</span>
+</div>
+</div>
+<!-- Action Response Group: 1. Acknowledge, 2. Cancel, 3. Escalate -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- 1. Acknowledge -->
+<button class="h-12 bg-tertiary-container hover:brightness-110 text-on-tertiary font-headline-sm text-headline-sm uppercase font-bold rounded-DEFAULT flex items-center justify-center gap-space-xs shadow-md" onclick="handleAcknowledgeAlert()">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Acknowledge</span>
+</button>
+<!-- 2. Cancel / Close -->
+<button class="h-12 bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-headline-sm text-headline-sm uppercase font-bold rounded-DEFAULT flex items-center justify-center gap-space-xs" onclick="handleCancelAlert()">
+<span class="material-symbols-outlined text-[20px]">cancel</span>
+<span>Dismiss</span>
+</button>
+</div>
+<!-- 3. Escalate Action Row / Trigger Toggle -->
+<button class="h-12 bg-secondary-container hover:brightness-110 text-on-secondary-container font-headline-sm text-headline-sm uppercase font-black rounded-DEFAULT flex items-center justify-center gap-space-xs shadow-md" onclick="toggleEscalationForm()">
+<span class="material-symbols-outlined text-[20px]">phone_forwarded</span>
+<span>Escalate to Lead / Supervisor</span>
+</button>
+<!-- Inline Escalation Sub-Form (Hidden initially) -->
+<div class="hidden bg-surface-container-lowest p-space-md rounded-DEFAULT flex flex-col gap-space-sm mt-space-xs" id="escalation-form-section">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Twilio Urgent Escalation Target</span>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-outline uppercase">Supervisor / Tech Contact</label>
+<select class="h-11 bg-surface-container px-space-sm text-on-surface font-label-md rounded-DEFAULT" id="escalate-target-select">
+<option value="+15550928811">Plant Supervisor - D. Henderson (+1 555-092-8811)</option>
+<option value="+15554192004">Lead Maintenance Tech - R. Kowalski (+1 555-419-2004)</option>
+<option value="+15553129944">Tooling Specialist - K. Sato (+1 555-312-9944)</option>
+</select>
+</div>
+<button class="h-11 bg-primary text-on-primary font-label-lg text-label-lg uppercase font-black rounded-DEFAULT flex items-center justify-center gap-space-xs mt-1" onclick="dispatchEscalationSMS()">
+<span class="material-symbols-outlined text-[18px]">forward_to_inbox</span>
+<span>Dispatch Immediate SMS Escalation</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Vanilla JavaScript Logic -->
+<script>
+    let activeAlertId = null;
+    let alertsCount = 3;
+    let injectionMoldingMachines  =  ["IMM4147","IMM4202","IMM4205","IMM4128","IMM4144","IMM4142","IMM4600","IMM4601","IMM4602","IMM4603","IMM4242-B","IMM4242-A","IMM4241-B","IMM4241-A","IMM4278-A","IMM4278-B","IMM4279-B","IMM4279-A","IMM4301","IMM4302","IMM4290","IMM4291"];
+    let supervisorsPerPlant = {
+      "South-Molding":[
+        {name: "Scott Wood",phoneNumber:"+1"}
+      ]
+    }
+
+    function InjectMoldingMachines(injectionMoldingMachines) {
+      // event.preventDefault();
+      const mainInjectionTag =  document.getElementById("main_Injection Target");
+      injectedTarget = "";
+      for(let i=0;i<injectionMoldingMachines.length;i++){
+        injectedTarget += `<option value="${injectionMoldingMachines[i]}">${injectionMoldingMachines[i]}</option>`;
+      }
+      print(injectedTarget);
+      mainInjectionTag.innerHTML =  injectedTarget;
+      
+    }
+
+    function showToast(message, isError = false) {
+      const banner = document.getElementById('toast-banner');
+      const text = document.getElementById('toast-text');
+      text.innerText = message;
+      banner.className = isError 
+        ? "transition-all duration-300 w-full px-gutter py-2 text-center font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-space-sm bg-secondary-container text-on-secondary-container z-30 shadow-md"
+        : "transition-all duration-300 w-full px-gutter py-2 text-center font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-space-sm bg-tertiary-container text-on-tertiary z-30 shadow-md";
+      banner.classList.remove('hidden');
+      setTimeout(() => {
+        banner.classList.add('hidden');
+      }, 4000);
+    }
+
+    function openModal(modalId) {
+      // let x=0;
+      // if (modalId === 'create-alert-modal') {
+      //   InjectMoldingMachines(injectionMoldingMachines);
+      // }
+      const el = document.getElementById(modalId);
+      if (el) el.classList.remove('hidden');
+    }
+
+    function closeModal(modalId) {
+      const el = document.getElementById(modalId);
+      if (el) el.classList.add('hidden');
+      if (modalId === 'alert-action-modal') {
+        const escForm = document.getElementById('escalation-form-section');
+        if (escForm) escForm.classList.add('hidden');
+      }
+    }
+
+    function setConnectionState(state) {
+      const redBtn = document.getElementById('btn-state-red');
+      const greenBtn = document.getElementById('btn-state-green');
+      const yellowBtn = document.getElementById('btn-state-yellow');
+      const twilioBadge = document.getElementById('twilio-badge-status');
+      const gwStatus = document.getElementById('telemetry-gw-status');
+
+      // Reset style classes
+      [redBtn, greenBtn, yellowBtn].forEach(btn => {
+        btn.className = "px-space-sm py-1 rounded-DEFAULT font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1";
+      });
+
+      if (state === 'red') {
+        redBtn.className = "px-space-sm py-1 rounded-DEFAULT font-label-sm text-label-sm font-bold uppercase transition-all bg-secondary-container text-on-secondary-container flex items-center gap-1 shadow-sm";
+        twilioBadge.innerText = "CONNECTED";
+        twilioBadge.className = "font-label-sm text-label-sm uppercase bg-tertiary-container text-on-tertiary px-space-xs py-0.5 rounded-DEFAULT font-bold";
+        gwStatus.innerText = "ACTIVE";
+        gwStatus.className = "font-label-sm text-label-sm font-bold text-tertiary uppercase mt-1 block";
+        showToast("Simulating Active Alarm Queue (3 alerts active on floor)", true);
+      } else if (state === 'green') {
+        greenBtn.className = "px-space-sm py-1 rounded-DEFAULT font-label-sm text-label-sm font-bold uppercase transition-all bg-tertiary-container text-on-tertiary flex items-center gap-1 shadow-sm";
+        twilioBadge.innerText = "CONNECTED";
+        twilioBadge.className = "font-label-sm text-label-sm uppercase bg-tertiary-container text-on-tertiary px-space-xs py-0.5 rounded-DEFAULT font-bold";
+        gwStatus.innerText = "STANDBY";
+        gwStatus.className = "font-label-sm text-label-sm font-bold text-tertiary uppercase mt-1 block";
+        showToast("System State: ALL CLEAR // Normal Operation");
+      } else if (state === 'yellow') {
+        yellowBtn.className = "px-space-sm py-1 rounded-DEFAULT font-label-sm text-label-sm font-bold uppercase transition-all bg-primary-container text-on-primary flex items-center gap-1 shadow-sm";
+        twilioBadge.innerText = "GATEWAY RETRY";
+        twilioBadge.className = "font-label-sm text-label-sm uppercase bg-primary-container text-on-primary px-space-xs py-0.5 rounded-DEFAULT font-bold animate-pulse";
+        gwStatus.innerText = "RETRY 503";
+        gwStatus.className = "font-label-sm text-label-sm font-bold text-primary uppercase mt-1 block";
+        showToast("Twilio Gateway Unreachable - Initiating Backup Cellular Relay", true);
+      }
+    }
+
+    function handleSaveMachineId(event) {
+      event.preventDefault();
+      const techName = document.getElementById('input-tech-name').value;
+      const newId = document.getElementById('input-new-machine-id').value.trim().toUpperCase();
+      
+      document.getElementById('active-machine-id-text').innerText = newId;
+      document.getElementById('current-cell-display').innerText = newId;
+      
+      closeModal('machine-id-modal');
+      showToast(`Machine ID updated to ${newId} by Tech ${techName}`);
+    }
+
+    function handleSendTwilioTest(event) {
+      event.preventDefault();
+      const phone = document.getElementById('input-twilio-phone').value;
+      const btn = document.getElementById('btn-submit-twilio-test');
+      btn.innerText = "Transmitting...";
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">send</span><span>Send Test SMS</span>`;
+        btn.disabled = false;
+        closeModal('twilio-test-modal');
+        showToast(`Twilio SMS delivered to ${phone} (SID: SM881920aa)`);
+      }, 700);
+    }
+
+    function handleTriggerAndon(event) {
+      event.preventDefault();
+      const reason = document.getElementById('new-alert-reason').value;
+      const station = document.getElementById('new-alert-station').value;
+      const severityRadios = document.getElementsByName('alert-severity');
+      let severity = "P1 CRITICAL";
+      for (const r of severityRadios) {
+        if (r.checked) {
+          severity = r.value;
+          break;
+        }
+      }
+
+      const newId = "ALT-" + Math.floor(1000 + Math.random() * 9000);
+      const nowStr = new Date().toLocaleTimeString();
+
+      // Ensure empty state is cleared
+      const emptyState = document.getElementById('alerts-empty-state');
+      const cardList = document.getElementById('alerts-card-list');
+      emptyState.classList.add('hidden');
+      cardList.classList.remove('hidden');
+
+      // Create new DOM card
+      const newCard = document.createElement('div');
+      newCard.className = "bg-surface-container hover:bg-surface-container-high p-space-sm rounded-DEFAULT cursor-pointer shadow-sm transition-all flex flex-col gap-space-xs group animate-pulse";
+      newCard.onclick = function() {
+        openAlertAction(newId, reason, station, `${nowStr} (just now)`, severity, 'bg-secondary-container text-on-secondary-container');
+      };
+      newCard.innerHTML = `
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-space-xs">
+            <span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+            <span class="font-label-sm text-label-sm uppercase text-secondary font-bold font-telemetry-counter">${newId} // ${severity}</span>
+          </div>
+          <span class="font-label-sm text-label-sm text-outline font-telemetry-counter">${nowStr}</span>
+        </div>
+        <span class="font-headline-sm text-headline-sm uppercase text-on-surface font-black group-hover:text-primary transition-colors">${reason}</span>
+        <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs bg-surface-container-lowest/50 px-space-xs py-1 rounded-DEFAULT">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span>${station}</span>
+          <span class="text-error font-bold">JUST NOW</span>
+        </div>
+      `;
+
+      cardList.prepend(newCard);
+      alertsCount++;
+      document.getElementById('queue-badge-counter').innerText = alertsCount;
+      setConnectionState('red');
+
+      closeModal('create-alert-modal');
+      showToast(`NEW ANDON DISPATCH: ${reason} at ${station} paged via Twilio`);
+    }
+
+    function openAlertAction(id, type, station, time, urgency, badgeClass) {
+      activeAlertId = id;
+      document.getElementById('modal-alert-id').innerText = id;
+      document.getElementById('modal-alert-type').innerText = type;
+      document.getElementById('modal-alert-station').innerText = station;
+      document.getElementById('modal-alert-time').innerText = time;
+      document.getElementById('modal-alert-urgency').innerText = urgency + " ALERT";
+      document.getElementById('escalation-form-section').classList.add('hidden');
+      openModal('alert-action-modal');
+    }
+
+    function handleAcknowledgeAlert() {
+      closeModal('alert-action-modal');
+      showToast(`Alert ${activeAlertId} Acknowledged: Tech on-site`);
+    }
+
+    function handleCancelAlert() {
+      closeModal('alert-action-modal');
+      showToast(`Alert ${activeAlertId} Dismissed / False Alarm Logged`);
+    }
+
+    function toggleEscalationForm() {
+      const esc = document.getElementById('escalation-form-section');
+      esc.classList.toggle('hidden');
+    }
+
+    function dispatchEscalationSMS() {
+      const select = document.getElementById('escalate-target-select');
+      const contactVal = select.options[select.selectedIndex].text;
+      closeModal('alert-action-modal');
+      showToast(`Escalated ${activeAlertId} to ${contactVal} via Priority Twilio SMS`);
+    }
+
+    function toggleSimulateClear() {
+      const list = document.getElementById('alerts-card-list');
+      const empty = document.getElementById('alerts-empty-state');
+      const counter = document.getElementById('queue-badge-counter');
+      const btn = document.getElementById('toggle-simulate-empty');
+
+      if (list.classList.contains('hidden')) {
+        list.classList.remove('hidden');
+        empty.classList.add('hidden');
+        counter.innerText = "3";
+        btn.innerText = "Simulate Cleared";
+        setConnectionState('red');
+      } else {
+        list.classList.add('hidden');
+        empty.classList.remove('hidden');
+        empty.classList.add('flex');
+        counter.innerText = "0";
+        btn.innerText = "Restore Alerts";
+        setConnectionState('green');
+      }
+    }
+  </script>
+</div></main><footer class="fixed bottom-0 left-64 right-0 h-16 bg-surface-container-lowest z-40 px-gutter flex items-center justify-between shadow-[0_-4px_16px_rgba(0,0,0,0.6)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="w-2.5 h-2.5 rounded-full bg-tertiary shadow-[0_0_8px_#56e5a9]"></span><span class="font-label-sm text-label-sm text-on-surface uppercase font-bold tracking-wider">Andon Node Sync: 100%</span></div><div class="hidden md:flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm"><span class="font-telemetry-counter">PACKETS: 148,203 TX</span><span>ERR: 0.00%</span></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center h-10 px-space-md bg-surface-container-high rounded-DEFAULT text-on-surface-variant font-label-sm text-label-sm uppercase gap-space-sm"><span class="material-symbols-outlined text-[18px] text-primary">security</span><span>SAFETY PROTOCOL: ISO-13849</span></div><button class="h-12 px-space-xl bg-primary-container text-on-primary hover:bg-primary font-headline-sm text-headline-sm font-black uppercase rounded-DEFAULT flex items-center gap-space-sm shadow-[0_2px_0_0_#613b00,0_4px_12px_rgba(0,0,0,0.6)] active:translate-y-0.5 active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)]" type="button"><span class="material-symbols-outlined text-[24px]">emergency_home</span><span>CREATE ALARM PAGE</span></button></div></footer></div></body></html>
