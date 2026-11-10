@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_SVG_START:ANIMATION_1 class="fixed inset-0 w-full h-full" --><div class="fixed inset-0 w-full h-full" id="animated-svg-ANIMATION_1" style="display:block;"><svg height="100%" viewbox="0 0 500 240" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="gearGrad1" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#94a3b8"></stop>
+<stop offset="50%" stop-color="#475569"></stop>
+<stop offset="100%" stop-color="#1e293b"></stop>
+</lineargradient>
+<lineargradient id="gearGrad2" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#f59e0b"></stop>
+<stop offset="50%" stop-color="#d97706"></stop>
+<stop offset="100%" stop-color="#78350f"></stop>
+</lineargradient>
+<lineargradient id="gearGrad3" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#38bdf8"></stop>
+<stop offset="50%" stop-color="#0284c7"></stop>
+<stop offset="100%" stop-color="#0f172a"></stop>
+</lineargradient>
+<filter height="140%" id="shadow" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="6" flood-color="#000000" flood-opacity="0.6" stddeviation="6"></fedropshadow>
+</filter>
+</defs>
+<style>
+    @keyframes spinClockwise {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes spinCounterClockwise {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+    .gear-main {
+      transform-origin: 170px 120px;
+      animation: spinClockwise 8s linear infinite;
+    }
+    .gear-secondary {
+      transform-origin: 310px 95px;
+      animation: spinCounterClockwise 5.33s linear infinite;
+    }
+    .gear-tertiary {
+      transform-origin: 270px 175px;
+      animation: spinClockwise 4s linear infinite;
+    }
+  </style>
+<!-- Background technical grid lines -->
+<g opacity="0.4" stroke="#334155" stroke-dasharray="3 3" stroke-width="1">
+<line x1="20" x2="480" y1="120" y2="120"></line>
+<line x1="170" x2="170" y1="20" y2="220"></line>
+<line x1="310" x2="310" y1="20" y2="220"></line>
+<circle cx="170" cy="120" fill="none" r="95"></circle>
+<circle cx="310" cy="95" fill="none" r="65"></circle>
+<circle cx="270" cy="175" fill="none" r="50"></circle>
+</g>
+<!-- Large Primary Gear (12 teeth, radius ~80) -->
+<g class="gear-main" filter="url(#shadow)">
+<!-- 12 teeth -->
+<g fill="url(#gearGrad1)" stroke="#0f172a" stroke-width="1.5">
+<!-- Outer ring with teeth -->
+<path d="
+        M 170 42 L 176 42 L 180 54 L 188 56 L 198 48 L 204 53 L 202 65 L 210 70 L 222 66 L 225 74 L 219 84 L 224 92 L 237 92 L 237 100 L 228 107 L 228 116 L 239 122 L 235 130 L 223 131 L 220 140 L 227 151 L 220 157 L 209 152 L 202 158 L 204 171 L 196 174 L 187 165 L 179 168 L 174 180 L 166 180 L 161 168 L 153 165 L 144 174 L 136 171 L 138 158 L 131 152 L 120 157 L 113 151 L 120 140 L 117 131 L 105 130 L 101 122 L 112 116 L 112 107 L 103 100 L 103 92 L 116 92 L 121 84 L 115 74 L 118 66 L 130 70 L 138 65 L 136 53 L 142 48 L 152 56 L 160 54 Z"></path>
+<!-- Body -->
+<circle cx="170" cy="120" fill="url(#gearGrad1)" r="62" stroke="#334155" stroke-width="2"></circle>
+<!-- Cutout spokes -->
+<circle cx="170" cy="85" fill="#0b1120" r="11"></circle>
+<circle cx="200" cy="103" fill="#0b1120" r="11"></circle>
+<circle cx="200" cy="137" fill="#0b1120" r="11"></circle>
+<circle cx="170" cy="155" fill="#0b1120" r="11"></circle>
+<circle cx="140" cy="137" fill="#0b1120" r="11"></circle>
+<circle cx="140" cy="103" fill="#0b1120" r="11"></circle>
+<!-- Inner Hub -->
+<circle cx="170" cy="120" fill="#1e293b" r="26" stroke="#64748b" stroke-width="2"></circle>
+<circle cx="170" cy="120" fill="#0b1120" r="12" stroke="#f59e0b" stroke-width="2"></circle>
+<rect fill="#f59e0b" height="6" width="4" x="168" y="106"></rect>
+</g>
+</g>
+<!-- Secondary Medium Gear (8 teeth, radius ~52) -->
+<g class="gear-secondary" filter="url(#shadow)">
+<g fill="url(#gearGrad2)" stroke="#0f172a" stroke-width="1.5">
+<path d="
+        M 310 44 L 316 44 L 320 54 L 329 57 L 338 50 L 344 56 L 341 66 L 349 73 L 360 70 L 363 79 L 354 87 L 357 97 L 368 101 L 366 110 L 354 113 L 351 123 L 359 132 L 353 139 L 342 135 L 334 142 L 335 153 L 326 156 L 319 146 L 309 147 L 304 158 L 295 156 L 294 145 L 284 142 L 275 149 L 269 142 L 275 133 L 271 123 L 259 120 L 260 110 L 271 107 L 272 97 L 262 90 L 266 82 L 277 84 L 284 76 L 280 65 L 288 60 L 295 68 L 304 64 Z"></path>
+<circle cx="310" cy="95" fill="url(#gearGrad2)" r="40" stroke="#78350f" stroke-width="2"></circle>
+<!-- Cutouts -->
+<circle cx="310" cy="73" fill="#0b1120" r="8"></circle>
+<circle cx="329" cy="85" fill="#0b1120" r="8"></circle>
+<circle cx="329" cy="107" fill="#0b1120" r="8"></circle>
+<circle cx="310" cy="117" fill="#0b1120" r="8"></circle>
+<circle cx="291" cy="107" fill="#0b1120" r="8"></circle>
+<circle cx="291" cy="85" fill="#0b1120" r="8"></circle>
+<!-- Hub -->
+<circle cx="310" cy="95" fill="#1e293b" r="18" stroke="#cbd5e1" stroke-width="1.5"></circle>
+<circle cx="310" cy="95" fill="#0b1120" r="9" stroke="#f59e0b" stroke-width="2"></circle>
+</g>
+</g>
+<!-- Small Tertiary Gear (6 teeth, radius ~38) -->
+<g class="gear-tertiary" filter="url(#shadow)">
+<g fill="url(#gearGrad3)" stroke="#0f172a" stroke-width="1.5">
+<path d="
+        M 270 137 L 275 137 L 278 145 L 287 149 L 295 143 L 300 148 L 296 157 L 302 165 L 311 165 L 312 173 L 304 180 L 305 188 L 313 194 L 309 201 L 299 199 L 293 206 L 293 216 L 285 216 L 280 208 L 271 207 L 265 214 L 258 210 L 261 200 L 256 193 L 246 193 L 246 184 L 254 178 L 253 170 L 245 163 L 250 156 L 260 158 L 267 151 Z"></path>
+<circle cx="270" cy="175" fill="url(#gearGrad3)" r="28" stroke="#0369a1" stroke-width="1.5"></circle>
+<circle cx="270" cy="175" fill="#0f172a" r="14" stroke="#38bdf8" stroke-width="2"></circle>
+<circle cx="270" cy="175" fill="#38bdf8" r="6"></circle>
+</g>
+</g>
+<!-- Industrial telemetry accents -->
+<text fill="#64748b" font-family="monospace" font-size="11" letter-spacing="1.5" x="30" y="36">RPM: 420 // SYNC_OK</text>
+<text fill="#10b981" font-family="monospace" font-size="11" letter-spacing="1" x="30" y="215">● GEAR TRAIN ACTIVE</text>
+<text fill="#64748b" font-family="monospace" font-size="10" x="350" y="215">BLENDER RIG v2.4</text>
+</svg></div><!-- STITCH_SVG_END:ANIMATION_1 -->
+</body>
+</html>
